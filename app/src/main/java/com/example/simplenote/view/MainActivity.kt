@@ -1,7 +1,8 @@
-package com.example.simplenote
+package com.example.simplenote.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.simplenote.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
