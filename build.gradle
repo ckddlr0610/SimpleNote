@@ -22,6 +22,17 @@ allprojects {
     }
 }
 
+ext {
+    hiltAndroidCompilerVersion = '2.29.1-alpha'
+
+    loggerVersion = '2.2.0'
+
+    retrofitVersion = '2.9.0'
+    retrofitConverterGsonVersion = '2.9.0'
+    gsonVersion = '2.8.6'
+    okhttpVersion = '4.9.0'
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
