@@ -1,10 +1,13 @@
 package com.clean.simplenote.view
 
 import android.app.Application
+import android.content.Intent
+import com.clean.simplenote.view.view.MainActivity
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.BuildConfig
 import com.orhanobut.logger.Logger
 import dagger.hilt.android.HiltAndroidApp
+import kotlin.concurrent.timer
 
 @HiltAndroidApp
 class SimpleNoteApplication : Application(){
@@ -16,7 +19,13 @@ class SimpleNoteApplication : Application(){
                 return BuildConfig.DEBUG
             }
         })
-        // initialize Hilt Application
+
+        timer(period = 1000) {
+            Intent(
+                this@SimpleNoteApplication,
+                MainActivity::class.java
+            )
+        }
     }
 
     override fun onLowMemory() {
