@@ -13,8 +13,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewDataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        supportFragmentManager.beginTransaction()
+            .add(R.id.container_main_fragment, MenuFragment()).commit()
+
         with(viewDataBinding) {
-            navMain.setOnNavigationItemSelectedListener {
+            navMain.setOnNavigationItemSelectedListener { item ->
+                when (item.itemId) {
+                    R.id.nav_menu -> {
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.container_main_fragment, MenuFragment()).commit()
+                    }
+                    R.id.nav_search -> {
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.container_main_fragment, SearchFragment()).commit()
+                    }
+                    R.id.nav_edit -> {
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.container_main_fragment, EditFragment()).commit()
+                    }
+                    R.id.nav_add -> {
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.container_main_fragment, AddFragment()).commit()
+                    }
+                }
                 false
             }
         }
