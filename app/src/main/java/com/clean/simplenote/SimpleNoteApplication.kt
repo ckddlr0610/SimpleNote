@@ -1,8 +1,8 @@
-package com.clean.simplenote.view
+package com.clean.simplenote
 
 import android.app.Application
 import android.content.Intent
-import com.clean.simplenote.view.view.MainActivity
+import com.clean.simplenote.view.MainActivity
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.BuildConfig
 import com.orhanobut.logger.Logger

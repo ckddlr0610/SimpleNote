@@ -1,4 +1,4 @@
-package com.clean.simplenote.view.view
+package com.clean.simplenote.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.clean.simplenote.R
-import com.clean.simplenote.databinding.FragmentEditBinding
+import com.clean.simplenote.databinding.FragmentAddBinding
 
-class EditFragment : Fragment() {
-    private lateinit var viewDataBinding: FragmentEditBinding
+class AddFragment : Fragment() {
+    private lateinit var viewDataBinding: FragmentAddBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -18,7 +18,7 @@ class EditFragment : Fragment() {
     ): View? {
         viewDataBinding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_edit,
+            R.layout.fragment_add,
             container,
             false
         )

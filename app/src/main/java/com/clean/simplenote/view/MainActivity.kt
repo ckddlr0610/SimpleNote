@@ -1,4 +1,4 @@
-package com.clean.simplenote.view.view
+package com.clean.simplenote.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
