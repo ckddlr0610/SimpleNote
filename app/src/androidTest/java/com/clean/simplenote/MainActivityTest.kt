@@ -21,7 +21,7 @@ class MainActivityTest {
     }
 
     @Test
-    fun test_isFragmentInView() {
+    fun test_isFragmentOnBottomNavigationView() {
         val activityScenario = ActivityScenario.launch(MainActivity::class.java)
 
         onView(withId(R.id.nav_menu)).perform(click())
