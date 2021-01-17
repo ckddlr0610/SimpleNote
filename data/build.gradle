@@ -50,6 +50,8 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
 
     implementation "com.google.dagger:hilt-android:$hiltAndroidCompilerVersion"
+    implementation 'androidx.hilt:hilt-common:1.0.0-alpha02'
     kapt "com.google.dagger:hilt-android-compiler:$hiltAndroidCompilerVersion"
-    implementation "com.orhanobut:logger:$loggerVersion"
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
 }
