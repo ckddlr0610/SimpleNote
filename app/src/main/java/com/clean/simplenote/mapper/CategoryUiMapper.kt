@@ -1,6 +1,6 @@
 package com.clean.simplenote.mapper
 
-import com.clean.domain.model.Category
+import com.clean.simplenote.domain.model.Category
 import com.clean.simplenote.model.CategoryUiModel
 
 class CategoryUiMapper : Mapper<List<Category>, List<CategoryUiModel>> {
