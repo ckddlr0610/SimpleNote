@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.clean.simplenote.R
 import com.clean.simplenote.databinding.ActivityMainBinding
+import com.clean.simplenote.view.view.add.AddFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewDataBinding: ActivityMainBinding
@@ -33,7 +34,10 @@ class MainActivity : AppCompatActivity() {
                     }
                     R.id.nav_add -> {
                         supportFragmentManager.beginTransaction()
-                            .replace(R.id.container_main_fragment, AddFragment()).commit()
+                            .replace(
+                                R.id.container_main_fragment,
+                                AddFragment()
+                            ).commit()
                     }
                 }
                 false
